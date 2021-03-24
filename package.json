@@ -1,0 +1,22 @@
+{
+  "name": "clase-12-jquery-promises-api",
+  "version": "1.0.0",
+  "description": "Realizando tareade la clase-12 utilizando API, Promises y posiblemente jquery testando luego con cypress.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuuanmaSR/clase-12-jquery-promises-api.git"
+  },
+  "author": "Juan Maria Fernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuuanmaSR/clase-12-jquery-promises-api/issues"
+  },
+  "homepage": "https://github.com/JuuanmaSR/clase-12-jquery-promises-api#readme",
+  "devDependencies": {
+    "cypress": "^6.8.0"
+  }
+}
