@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.page{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1200px;
+    background-color: #d7d8dd;
+    
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0F1F4;
+    border-bottom: 2px solid black;
+    box-shadow: 0px 0px 2px black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+}
+.header-h1{
+    font-family:'Bebas Neue', cursive ;
+    font-size: 4em;
+    font-variant: small-caps;
+    color:#48494A;
+}
+.subheader{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 100px 10px 0;
+    border-radius: 3px;
+    color: #48494A;
+    font-family: "Helvetica", "Arial", sans-serif;
+    text-align: center;
+    background-color: #F6F7F8;
+    border: 1px solid #48494A;
+    padding: 2px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 10px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    background-color: #F6F7F8;
+    color: #48494A;
+    font-size: 1.5em;
+    border: 1px solid #48494A;
+    border-radius: 5px;
+   
+}
+
+.form-row{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    width: 100%;
+}
+.form-row label{
+    padding-bottom: 5px;
+}
+.form-row input, .form-row select{
+    padding: 10px;
+    border: 1px solid #d6d9dc;
+    border-radius: 3px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 16px;
+   
+}
+
+.form-row-button{
+    font-size: 16px;
+    color:  #ffffff;
+    background-color: #5995da;
+    font-weight: bold;
+    font-family:"Helvetica", "Arial", sans-serif ;
+    padding: 10px;
+    border: 1px solid #48494A;
+    border-radius: 4px;
+}
