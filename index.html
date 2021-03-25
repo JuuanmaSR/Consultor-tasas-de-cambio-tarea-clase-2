@@ -30,7 +30,7 @@
                 Ingrese una fecha y una base para consultar las tasas de cambio
             </h2>
         </div>
-        <form action="https://jmftasasdecambio.netlify.app" method="GET">
+        <form action="" method="GET">
             <div class="form">
                 <div class="form-row">
                     <label for="date">Fecha</label>
@@ -72,6 +72,10 @@
                         <option value="THB">Thai Baht</option>
                         <option value="ZAR">South African Rand</option>
                     </select>
+                </div>
+                <div id="mostrar-errores" class="oculto">
+                    <h3>Error:</h3>
+                    <p>Es obligatorio seleccionar una fecha</p>
                 </div>
                 <div class="form-row">
                     <button  class="form-row-button" id="consultar-tasas">Consultar</button>
