@@ -27,7 +27,7 @@ buttton.onclick = function (event) {
         mostrarResultado();
     }
 
-
+    event.preventDefault();
 
 }
 function mostrarResultado(){
