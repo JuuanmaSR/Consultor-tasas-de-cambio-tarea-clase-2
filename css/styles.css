@@ -3,33 +3,39 @@
     padding: 0;
     box-sizing: border-box;
 }
+.oculto{
+    display: none;
+}
+
 .page{
     display: flex;
+    position: relative;
     flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
-    height: 1200px;
     background-color: #d7d8dd;
     
 }
 
 .header{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: #F0F1F4;
-    border-bottom: 2px solid black;
-    box-shadow: 0px 0px 2px black;
     position: fixed;
     top: 0;
     width: 100%;
-
+}
+.header-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #F0F1F4; 
+    width: 100%;
+    box-shadow: 0px 2px 2px black;
 }
 .header-h1{
     font-family:'Bebas Neue', cursive ;
     font-size: 4em;
     font-variant: small-caps;
     color:#48494A;
+    
 }
 .subheader{
     display: flex;
@@ -61,7 +67,7 @@
 
 .form-row{
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     padding: 20px 40px;
     width: 100%;
 }
@@ -88,4 +94,92 @@
     border: 1px solid #48494A;
     border-radius: 4px;
     margin: auto;
+}
+
+
+.container-resultado{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.resultado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#F6F7F8 ;
+    border: 1px solid #48494A;
+    border-radius: 4px;
+    margin: 20px 10px;
+    padding-bottom: 20px;
+    font-family:"Helvetica", "Arial", sans-serif ;
+    color: #48494A;
+    overflow: hidden;
+    flex-wrap: wrap;
+    
+}
+.resultado-h1{
+    margin: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #48494A;
+    
+}
+.resultado strong{
+    color: #5995da;
+}
+.resultado-ul{
+    margin-left: auto;
+}
+.resultado-ul li{
+    font-size: 1.5em;
+    padding: 8px;
+    text-align: justify;
+    
+}
+
+
+@media only screen and (min-width: 961px){
+  
+    .page{
+        width: 960px;
+        margin: auto;
+        height: auto;
+    }
+
+    .header-content{
+        width: 960px;
+    }
+    .subheader{
+        margin: 100px 80px 0;
+    }
+    .form-row{
+        flex-direction: row;
+        align-items: center;
+        
+        
+    }
+    .form-row label{
+        padding-right: 10px;
+    }
+    .form-row input{
+      margin-left: 0;
+       flex: 1;
+    }
+    
+    .form-row select{
+        margin-left: 10px;
+        flex: 1;
+    }
+    .form-row-button:hover{
+        background-color:#8cb7e9 ;
+    }
+    .resultado-ul li:hover{
+        border-bottom: 1px solid #48494A;
+        font-weight: bold;
+    }
+    .form, .resultado{
+        margin: 45px 80px;
+    }
+    .resultado-ul{
+        margin: auto;
+    }
 }
