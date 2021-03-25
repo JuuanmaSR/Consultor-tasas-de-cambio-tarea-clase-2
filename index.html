@@ -13,10 +13,14 @@
 
 <body>
     <div class="page">
+
         <header>
 
             <div class="header">
-                <h1 class="header-h1">Tasas de Cambio</h1>
+                <div class="header-content">
+                    <h1 class="header-h1">Tasas de Cambio</h1>
+                </div>
+
             </div>
 
 
@@ -26,11 +30,11 @@
                 Ingrese una fecha y una base para consultar las tasas de cambio
             </h2>
         </div>
-        <form action="" method="GET">
+        <form action="#resultado" method="GET">
             <div class="form">
                 <div class="form-row">
                     <label for="date">Fecha</label>
-                    <input class="input-date" id="date" type="date" min="1999-01-01">
+                    <input class="input-date" id="date" type="date" min="1999-01-01" required>
                 </div>
                 <div class="form-row">
                     <label for="base">Base</label>
@@ -70,10 +74,19 @@
                     </select>
                 </div>
                 <div class="form-row">
-                    <button class="form-row-button">Consultar</button>
+                    <button class="form-row-button" id="consultar-tasas">Consultar</button>
                 </div>
             </div>
         </form>
+        <div  class="container-resultado ">
+            <div id="resultado" class="oculto">
+                <h1 class="resultado-h1">Resultados de la fecha: <strong class="strong-date">2021-03-24</strong> en base <strong class="strong-base">USD</strong></h1>
+                <ul class="resultado-ul">
+                  
+                </ul>
+            </div>
+
+        </div>
     </div>
     <script src="src/main.js"></script>
 </body>
