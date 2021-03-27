@@ -1,6 +1,6 @@
 
-let buttton = document.querySelector(`#consultar-tasas`);
-buttton.onclick = function (event) {
+let button = document.querySelector(`#consultar-tasas`);
+button.onclick = function (event) {
     resetearResultado();
     let date = document.querySelector(`#date`).value;
     let base = document.querySelector(`#base`).value;
