@@ -12,7 +12,7 @@ button.onclick = function (event) {
 
     if (date != ``) {
         borrarErroresMostrados();
-        fetch(`https://api.exchangeratesapi.io/${date}?base=${base}`)
+        fetch(`https://api.exchangeratesapi.io/v1/${date}?base=${base}?access_key=c28af5acb82b8b86bce922b484998e23`)
             .then(respuesta => respuesta.json())
             .then(respuestaJSON => {
 
@@ -23,7 +23,8 @@ button.onclick = function (event) {
                     resultadoUl.appendChild(newLi);
 
                 })
-            });
+            })
+        
 
         resultadoHeaderDate.textContent = date;
         resultadoHeaderBase.textContent = base;
