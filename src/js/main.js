@@ -1,5 +1,29 @@
-
 let button = document.querySelector(`#consultar-tasas`);
+let myHeaders = new Headers();
+myHeaders.append("apikey", "RE656etU3tNeYc3ueTyYuCf7lX1FddGW" /* It's free demo*/ )
+let requestOptions = {
+    method: 'GET',
+    redirect: 'follow',
+    headers: myHeaders
+};
+function crearListaDeBases() {
+    let listaBase = document.querySelector(`#base`);
+    fetch("https://api.apilayer.com/exchangerates_data/symbols", requestOptions)
+        .then(respuesta => respuesta.json())
+        .then(respuestaJSON => {
+            Object.keys(respuestaJSON.symbols).forEach(base => {
+                let newOption = document.createElement(`option`);
+                newOption.setAttribute('value', `${base}`);
+                newOption.textContent = `${base} - ${respuestaJSON.symbols[base]}`;
+
+                listaBase.appendChild(newOption);
+            }
+
+            )
+        })
+        .catch(error => console.log('error', error));
+}
+crearListaDeBases();
 button.onclick = function (event) {
     resetearResultado();
     let date = document.querySelector(`#date`).value;
@@ -12,7 +36,7 @@ button.onclick = function (event) {
 
     if (date != ``) {
         borrarErroresMostrados();
-        fetch(`https://api.exchangeratesapi.io/v1/${date}?base=${base}?access_key=c28af5acb82b8b86bce922b484998e23`)
+        fetch(`https://api.apilayer.com/exchangerates_data/${date}?symbols=&base=${base}`, requestOptions)
             .then(respuesta => respuesta.json())
             .then(respuestaJSON => {
 
@@ -24,7 +48,7 @@ button.onclick = function (event) {
 
                 })
             })
-        
+
 
         resultadoHeaderDate.textContent = date;
         resultadoHeaderBase.textContent = base;

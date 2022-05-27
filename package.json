@@ -9,7 +9,9 @@
     "cypress-run": "cypress run",
     "cypress-dev": "cypress open",
     "test-cypress": "run-p start cypress-run",
-    "test-dev": "run-p start cypress-dev"
+    "test-dev": "run-p start cypress-dev",
+    "gulp": "cross-env NODE_ENV=production gulp",
+    "gulp:dev": "cross-env NODE_ENV=development gulp"
   },
   "repository": {
     "type": "git",
@@ -22,10 +24,15 @@
   },
   "homepage": "https://github.com/JuuanmaSR/clase-12-jquery-promises-api#readme",
   "devDependencies": {
-    "cypress": "^6.8.0"
+    "cross-env": "^7.0.3",
+    "cypress": "^6.8.0",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webserver": "^0.9.1"
   },
   "dependencies": {
-    "@types/cypress": "^1.1.3",
-    "express": "^4.17.1"
+    "@types/cypress": "^1.1.3"
   }
 }
